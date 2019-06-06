@@ -18,18 +18,20 @@
         <ul class="navbar-nav ml-auto">
             <?php if(isset($_SESSION['userId'])) : ?>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome <?php echo $_SESSION['userName']; ?></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
                 </li>
-            <? else : ?>
+            <?php else : ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
                 </li>
-            <? endif; ?>
+            <?php endif; ?>
         </ul>
-
         </div>
     </div>
 </nav>

@@ -21,7 +21,6 @@ class User {
         } else {
             return FALSE;
         }
-
     }
 
     // Login user
@@ -49,5 +48,15 @@ class User {
         } else {
             return FALSE;
         }
+    }
+
+    // Find user by id
+    public function getUserById($id) {
+        $this->db->query("SELECT * FROM users WHERE id = :id");
+        // Bind value
+        $this->db->bind('id', $id);
+        $row = $this->db->single();
+        // Check row
+        return $row;
     }
 }
