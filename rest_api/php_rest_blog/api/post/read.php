@@ -33,7 +33,7 @@ if($num > 0) {
             'body' => html_entity_decode($body),
             'author' => $author,
             'categoryId' => $category_id,
-            'categoryName' => $categoryName
+            'category_name' => $category_name
         );
 
         // Push to 'data'
